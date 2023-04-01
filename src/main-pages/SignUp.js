@@ -38,6 +38,8 @@ function SignUp() {
     }
 
     useEffect(() => {
+        const notificationContainer = document.querySelector('.notification-container')
+
         async function formUpload() {
             if(Object.keys(formErrors).length === 0 && isSubmit) {
                 const response = await fetch(process.env.REACT_APP_PATH + '/api/sign-up-student', {
@@ -51,9 +53,9 @@ function SignUp() {
                 })
                 const data = await response.json()
                 console.log(data)
-                // if (data.error === 'Duplicate email') {
-                //     formErrors.email = 'This email has already registered'
-                // }
+                if (data.error === 'invalid') {
+                    formErrors.email = 'This email has already registered'
+                }
                 if (data.registered === 'done') {
                     console.log("registered successfully")
                     setFormData({
@@ -66,22 +68,16 @@ function SignUp() {
                         password: '',
                         confirmPassword: ''
                     })
-                    window.location.href = '/'
-                    // setEmail('')
-                    // setUserName('')
-                    // setCreatedPassword('')
-                    // setConfirmedPassword('')
                     // animatedElements.forEach((elements) => {
                     //     elements.classList.add('active')
                     // })
-                    // const notification = document.createElement('div')
-                    // notification.classList.add('notification')
-                    // notification.innerHTML = '<i class="fa-solid fa-envelope"></i>An email sent to your account. Please verify!'
-                    // notificationContainer.appendChild(notification)
-                    // setTimeout(() => {
-                    //     notification.remove()
-                    // }, 7000)
-
+                    const notification = document.createElement('div')
+                    notification.classList.add('notification')
+                    notification.innerHTML = '<i class="fa-solid fa-envelope"></i>An email sent to your account. Please verify!'
+                    notificationContainer.appendChild(notification)
+                    setTimeout(() => {
+                        notification.remove()
+                    }, 7000)
                 }
                 setIsSubmit(false)
             }
@@ -92,6 +88,7 @@ function SignUp() {
     return(
         <>
             <div className="sign-up">
+                <div className='notification-container'></div>
                 <form onSubmit={signUpStudent}>
                     <h1>Create Your Account</h1>
                     <input
@@ -101,6 +98,7 @@ function SignUp() {
                         onChange={(e) => setFormData({...formData, email: e.target.value})}
                         required={true}
                     />
+                    <p>{formErrors.email}</p>
                     <input
                         type='text'
                         placeholder='SA Number'
