@@ -1,5 +1,5 @@
 import '../styles/sign-up.css'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 
 
@@ -15,6 +15,7 @@ function SignUp() {
     })
     const [formErrors, setFormErrors] = useState({})
     const [isSubmit, setIsSubmit] = useState(false)
+    const ref = useRef()
 
     async function signUpStudent(event) {
         event.preventDefault()
@@ -116,11 +117,13 @@ function SignUp() {
                         maxLength={40}
                     />
                     <input
-                        type='date'
+                        type='text'
                         placeholder='Birth Day'
                         value={formData.birthday}
                         onChange={(e) => setFormData({...formData, birthday: e.target.value})}
                         required={true}
+                        ref={ref}
+                        onFocus={() => (ref.current.type = "date")}
                     />
                     <input
                         type='number'

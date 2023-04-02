@@ -134,3 +134,9 @@
         width: 100%;
     }
 }
+
+@media(max-width: 577px) {
+    .notification{
+        padding: 0 10px;
+    }
+}
