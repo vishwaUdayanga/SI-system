@@ -74,7 +74,7 @@ function SignUp() {
                     // })
                     const notification = document.createElement('div')
                     notification.classList.add('notification')
-                    notification.innerHTML = '<i class="fa-solid fa-envelope"></i>An email sent to your account. Please verify!'
+                    notification.innerHTML = 'An email sent to your account. Please verify!'
                     notificationContainer.appendChild(notification)
                     setTimeout(() => {
                         notification.remove()
