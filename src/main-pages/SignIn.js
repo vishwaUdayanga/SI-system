@@ -63,7 +63,7 @@ function SignIn() {
                         password: '',
                     })
                     sessionStorage.setItem('student', data.student)
-                    window.location.href = '/student-dashboard'
+                    window.location.href = '/student-courses'
                 }
                 setIsSubmit(false)
             }

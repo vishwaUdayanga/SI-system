@@ -1,0 +1,112 @@
+footer{
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--background-hue);
+    border-top: 20px solid #c0ced8;
+    overflow: hidden;
+}
+
+.footer-content{
+    display: flex;
+    width: 100%;
+    padding : 40px 100px;
+    justify-content: space-around;
+}
+
+.footer-content h2{
+    border-left: 8px solid var(--topic-bar-hue);
+    padding-left: 7px;
+    width: 200px;
+    color: var(--text-hue);
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.footer-about p{
+    max-width: 80%;
+    margin-top: 20px;
+    font-size: 14px;
+    color: rgb(73, 74, 75);
+}
+
+.footer-links{
+    display: flex;
+    gap: 50px;
+}
+
+.footer-links ul {
+    margin-top: 20px;
+}
+
+.footer-links ul li {
+    list-style: none;
+}
+
+.footer-links ul li p{
+    font-size: 14px;
+    color: rgb(73, 74, 75);
+}
+
+.footer-button{
+    text-decoration: none;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    backdrop-filter: blur(5px);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    padding: 5px 0px;
+    color: var(--text-hue);
+}
+
+.footer-button:hover{
+    scale: 1.04;
+}
+
+.logout{
+    margin-top: 10px;
+    background-color: var(--topic-bar-hue);
+    color: white;
+}
+
+.copy-rights{
+    width: 100%;
+    padding: 20px 20px;
+    background-color: #d9e7f1;
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-hue);
+}
+
+@media(max-width: 1235px) {
+    .footer-content{
+        flex-direction: column;
+        gap: 30px;
+        padding : 40px 50px;
+    }
+}
+
+@media(max-width: 884px) {
+    .footer-links {
+        flex-direction: column;
+    }
+    .footer-about p{
+        max-width: 100%;
+    }
+    .footer-content{
+        flex-direction: column;
+        gap: 30px;
+        padding : 40px 10px;
+    }
+}

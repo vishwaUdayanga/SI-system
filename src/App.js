@@ -2,7 +2,7 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import SignIn from './main-pages/SignIn'
 import SignUp from './main-pages/SignUp'
 import EmailVerify from './main-pages/EmailVerify'
-import StudentDashboard from './main-pages/StudentDashboard'
+import StudentCourses from './main-pages/StudentCourses'
 import './styles/general-style.css'
 import './styles/color-palette.css'
 
@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path='/' element={<SignIn />} />
         <Route path='/sign-up' element={<SignUp />} />
-        <Route path='/student-dashboard' element={<StudentDashboard />} />
+        <Route path='/student-courses' element={<StudentCourses />} />
         <Route path="/student/:id/verify/:token" element={<EmailVerify />} />
       </Routes>
     </BrowserRouter>
