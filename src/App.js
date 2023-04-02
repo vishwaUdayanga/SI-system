@@ -5,7 +5,6 @@ import EmailVerify from './main-pages/EmailVerify'
 import StudentDashboard from './main-pages/StudentDashboard'
 import './styles/general-style.css'
 import './styles/color-palette.css'
-import 'https://kit.fontawesome.com/f1513ae29e.js'
 
 function App() {
   return (
