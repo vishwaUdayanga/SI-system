@@ -38,7 +38,7 @@ function Footer() {
                         <h2>Links</h2>
                         <ul>
                             <li>
-                                <Link className="footer-button">Connect WhatsApp</Link>
+                                <Link to='#' onClick={(e) => {window.location.href = 'https://chat.whatsapp.com/F0Fk7Tnk8ba5SMLDLrYm0J'; e.preventDefault();}} className="footer-button">Connect WhatsApp</Link>
                             </li>
                             <li>
                                 <Link className="footer-button logout" onClick={logout}>Logout</Link>
