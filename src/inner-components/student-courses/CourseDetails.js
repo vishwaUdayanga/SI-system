@@ -11,7 +11,7 @@ function CourseDetails() {
                     <p>Tuesday -- 8.30 a.m. - 10.30 a.m.</p>
                     <p>12th Floor Auditorium</p>
                     <h5>Enrollment Key - CSE2023#</h5>
-                    <p>Mr. Ishara Weerasinghe - <Link className="emails">raviharee.w@sliit.lk</Link></p>
+                    <p>Mr. Ishara Weerasinghe - <Link onClick={() => window.location = 'mailto:raviharee.w@sliit.lk'} className="emails">raviharee.w@sliit.lk</Link></p>
                 </div>
                 <div className='course-card'>
                     <h4>Programming Skills</h4>
