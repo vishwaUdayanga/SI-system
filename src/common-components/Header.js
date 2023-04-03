@@ -151,7 +151,7 @@ function Header() {
                             <Link className="menu-links">Announcement</Link>
                         </li>
                         <li>
-                            <Link className="menu-links">Birth days</Link>
+                            <Link className="menu-links">Birthdays</Link>
                         </li>
                         <li>
                             <Link className="menu-links">Events</Link>
