@@ -19,10 +19,10 @@ function Footer() {
                         <h2>Contacts</h2>
                         <ul>
                             <li>
-                                <p>SAD : <Link className="footer-links">studentservices.sliitacademy@sliit.lk</Link></p>
+                                <p>SAD : <Link to='#' onClick={(e) => {window.location.href = 'mailto:studentservices.sliitacademy@sliit.lk'; e.preventDefault();}} className="footer-links">studentservices.sliitacademy@sliit.lk</Link></p>
                             </li>
                             <li>
-                                <p>ITSD : <Link className="footer-links">geethma.s@sliit.lk</Link></p>
+                                <p>ITSD : <Link  to='#' onClick={(e) => {window.location.href = 'mailto:geethma.s@sliit.lk'; e.preventDefault();}} className="footer-links">geethma.s@sliit.lk</Link></p>
                             </li>
                         </ul>
                     </div>
