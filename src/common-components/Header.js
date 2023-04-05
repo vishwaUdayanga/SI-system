@@ -145,7 +145,7 @@ function Header() {
                 <div className='menu-list'>
                     <ul>
                         <li>
-                            <Link className="menu-links">Courses</Link>
+                            <Link to="/student-courses" className="menu-links">Courses</Link>
                         </li>
                         <li>
                             <Link className="menu-links">Announcement</Link>
