@@ -3,6 +3,7 @@ import SignIn from './main-pages/SignIn'
 import SignUp from './main-pages/SignUp'
 import EmailVerify from './main-pages/EmailVerify'
 import StudentCourses from './main-pages/StudentCourses'
+import Birthday from './main-pages/Birthday'
 import './styles/general-style.css'
 import './styles/color-palette.css'
 
@@ -14,6 +15,7 @@ function App() {
         <Route path='/sign-up' element={<SignUp />} />
         <Route path='/student-courses' element={<StudentCourses />} />
         <Route path="/student/:id/verify/:token" element={<EmailVerify />} />
+        <Route path="/birthdays" element={<Birthday />} />
       </Routes>
     </BrowserRouter>
   );

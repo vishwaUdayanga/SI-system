@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+.birthday-container{
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(169, 192, 213);
+    display: flex;
+    justify-content: center;
+    padding: 20px 20px;
+    overflow: hidden;
+}
+
+.birthday-content{
+    width: 800px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0px 30px;
+}
+
+.birthday-content h2{
+    color: rgb(65, 34, 69);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.birthday-content-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.birthday-card-container{
+    margin-top: 40px;
+}
+
+.birthday-card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    height: 600px;
+    margin-top: 10px;
+    background-color: rgb(217, 232, 244);
+    overflow: hidden;
+}
+
+.card-text{
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cake{
+    width: 50px;
+    height: 50px;
+}
+
+.special-font{
+    font-family: 'Luckiest Guy', cursive;
+    letter-spacing: 1px;
+    font-size: 30px;
+    color: rgb(77, 25, 81);
+}
+
+.wish-text{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 14px;
+    max-width: 300px;
+    margin-top: 10px;
+}
+
+.avatar-outer{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgb(77, 25, 81);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.avatar-outer img{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.up-circle,
+.bottom-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.up-circle{
+    top: -50px;
+    left: -50px;
+    background-color: rgba(94, 18, 81, 0.548);
+}
+
+.bottom-circle{
+    bottom: -50px;
+    right: -50px;
+    background-color: rgba(18, 48, 94, 0.548);
+}
+
+.balloons{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 30px;
+    left: 10px;
+}
+
+.bottom-text{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    text-align: left;
+    font-size: 13px;
+}
+
+.download-button{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.no-birthdays{
+    width: 100%;
+    height: 50vh;
+}
+
+.no-birthdays h2{
+    color: var(--text-hue);
+}
+
+@media(max-width: 517px){
+    .birthday-content{
+        width: 100%;
+        padding: 0;
+    }
+    .birthday-card{
+        width: 100%;
+        padding: 0;
+    }
+    .birthday-container{
+        padding: 0;
+        padding: 10px 0px;
+    }
+    .birthday-card-container{
+        width: 100%;
+        padding: 0px 10px;
+        margin-top: 10px;
+    }
+    .card-text{
+        z-index: 10;
+    }
+}
