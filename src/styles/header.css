@@ -126,7 +126,7 @@ nav .top-nav-bar .nav-student-details input{
     }
 }
 
-@media(max-width: 365px) {
+@media(max-width: 447px) {
     .student-name{
         display: none;
     }

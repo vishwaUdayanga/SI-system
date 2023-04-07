@@ -1,0 +1,65 @@
+.announcement-container{
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(169, 192, 213);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.announcement-content{
+    width: 800px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 20px;
+}
+
+.announcement-card{
+    width: 500px;
+    height: fit-content;
+    box-shadow: 2px 2px 20px rgba(71, 157, 255, 0.5);
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 20px 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--text-hue);
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.button-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.announcement-send-button{
+    background-color: var(--topic-bar-hue);
+    padding: 1px 20px;
+    color: var(--text-hue);
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.announcement-send-email-button:hover{
+    scale: 1.01;
+}
+
+@media(max-width: 822px) {
+    .announcement-content{
+        width: 100%;
+    }
+}
+
+@media(max-width: 572px) {
+    .announcement-card{
+        width: 100%;
+    }
+}

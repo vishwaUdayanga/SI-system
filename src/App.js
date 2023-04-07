@@ -4,6 +4,7 @@ import SignUp from './main-pages/SignUp'
 import EmailVerify from './main-pages/EmailVerify'
 import StudentCourses from './main-pages/StudentCourses'
 import Birthday from './main-pages/Birthday'
+import Announcement from './main-pages/Announcement'
 import './styles/general-style.css'
 import './styles/color-palette.css'
 
@@ -16,6 +17,7 @@ function App() {
         <Route path='/student-courses' element={<StudentCourses />} />
         <Route path="/student/:id/verify/:token" element={<EmailVerify />} />
         <Route path="/birthdays" element={<Birthday />} />
+        <Route path="/announcement" element={<Announcement />} />
       </Routes>
     </BrowserRouter>
   );

@@ -9,6 +9,7 @@ function Header() {
     const [isSetProfileImg, setIsSetProfileImg] = useState(false)
     const [fetchedProfileImage, setFetchedProfileImage] = useState('')
     const [studentName, setStudentName] = useState('')
+    const [studentType, setStudentType] = useState('')
     const notificationContainer = document.querySelector('.notification-container')
 
     async function handleProfilePic(event) {
@@ -50,9 +51,12 @@ function Header() {
             }
         })
         const data = await req.json()
+
         if (data.status === 'ok') {
             setFetchedProfileImage(data.profilePicture)
             setStudentName(data.name)
+            setStudentType(data.user)
+            sessionStorage.setItem("userType", data.user)
         }
 
         if (data.status === 'error') {
@@ -117,7 +121,7 @@ function Header() {
                         <h1>SI System</h1>
                     </div>
                     <div className="nav-student-details">
-                        <p className='student-name'>{studentName}</p>
+                        <p className='student-name'>{studentName} ({studentType})</p>
                         <div className='student-image'>
                             <label htmlFor='my-pic'>
                                 <img src={fetchedProfileImage || SampleStudentImage} alt="" />
@@ -148,7 +152,7 @@ function Header() {
                             <Link to = "/student-courses" className="menu-links">Courses</Link>
                         </li>
                         <li>
-                            <Link className="menu-links">Announcement</Link>
+                            <Link to="/announcement" className="menu-links">Announcement</Link>
                         </li>
                         <li>
                             <Link to="/birthdays" className="menu-links">Birthdays</Link>
