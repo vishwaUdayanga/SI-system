@@ -73,7 +73,7 @@ function AnnouncementContent() {
                         NOTICE - SLIIT Academy Holiday Notice(All Students) <br />
                         Source - <Link to='#' onClick={(e) => {window.location.href = 'https://sam.sliitacademy.lk/mod/forum/discuss.php?d=1728#p2140'; e.preventDefault();}}>https://sam.sliitacademy.lk/mod/forum/discuss.php?d=1728#p2140</Link> <br />
                         FROM - <Link to='#' onClick={(e) => {window.location.href = 'https://si-system.onrender.com'; e.preventDefault();}}>https://si-system.onrender.com</Link> <br /><br />
-                        Dear Students,, <br /><br />
+                        Dear Students, <br /><br />
                         Please note that, SLIIT Academy will be closed from 10th April 2023 to 16th April 2023 in lieu of Sinhala & Tamil New Year.
                          <br /><br />
                          Student Affairs Division
