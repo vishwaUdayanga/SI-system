@@ -68,6 +68,24 @@ function AnnouncementContent() {
     return(
         <div className='announcement-container'>
             <div className='announcement-content'>
+                <div className='announcement-card' id='announcement2-card'>
+                    <p id="announcement2">
+                        NOTICE - SLIIT Academy Holiday Notice(All Students) <br />
+                        Source - <Link to='#' onClick={(e) => {window.location.href = 'https://sam.sliitacademy.lk/mod/forum/discuss.php?d=1728#p2140'; e.preventDefault();}}>https://sam.sliitacademy.lk/mod/forum/discuss.php?d=1728#p2140</Link> <br />
+                        FROM - <Link to='#' onClick={(e) => {window.location.href = 'https://si-system.onrender.com'; e.preventDefault();}}>https://si-system.onrender.com</Link> <br /><br />
+                        Dear Students,, <br /><br />
+                        Please note that, SLIIT Academy will be closed from 10th April 2023 to 16th April 2023 in lieu of Sinhala & Tamil New Year.
+                         <br /><br />
+                         Student Affairs Division
+                    </p>
+                    {
+                        userType === "Admin" &&
+                        <div className='button-container'>
+                            <button onClick={() => sendEmail("announcement2")} className='announcement-send-button'>Email</button>
+                            <button onClick={() => sendWhatsapp("announcement2")} className='announcement-send-button'>Whatsapp</button>
+                        </div> 
+                    }
+                </div>
                 <div className='announcement-card' id='announcement1-card'>
                     <p id="announcement1">
                         NOTICE - Academic Announcement and Sharing Information <br />
