@@ -76,10 +76,6 @@ function AnnouncementContent() {
                         Dear Students, <br /><br />
                         Please note that, SLIIT Academy will be closed from 10th April 2023 to 16th April 2023 in lieu of Sinhala & Tamil New Year.
                          <br /><br />
-                        
-                        Student Affairs Division
-                        Please note that, SLIIT Academy will be closed from 10th April 2023 to 16th April 2023 in lieu of Sinhala & Tamil New Year.<br /><br />
-                        
                         Student Affairs Division
                     </p>
                     {
