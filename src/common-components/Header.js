@@ -161,7 +161,7 @@ function Header() {
                             <Link className="menu-links">Events</Link>
                         </li>
                         <li>
-                            <Link className="menu-links">Participants</Link>
+                            <Link to="/settings" className="menu-links">Settings</Link>
                         </li>
                     </ul>
                 </div>

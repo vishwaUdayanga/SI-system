@@ -1,5 +1,6 @@
 :root{
     --background-hue: #c7d5e0;
-    --text-hue: #222430;
+    /* --text-hue: #222430; */
+    --text-hue: #333646;
     --topic-bar-hue: #2ea9f0;
 }
