@@ -13,6 +13,10 @@ function SignIn() {
     async function signInStudent(event) {
         event.preventDefault()
         setFormErrors(validate(formData.password, formData.email))
+        const mainButton = document.getElementById('button-text')
+        const loadingCircle = document.getElementById('sign-in-loading-circle')
+        mainButton.innerText = ""
+        loadingCircle.classList.add('active')
         setIsSubmit(true)
     }
 
@@ -27,6 +31,8 @@ function SignIn() {
 
     useEffect(() => {
         const notificationContainer = document.querySelector('.notification-container')
+        const mainButton = document.getElementById('button-text')
+        const loadingCircle = document.getElementById('sign-in-loading-circle')
 
         async function formUpload() {
             if(Object.keys(formErrors).length === 0 && isSubmit) {
@@ -43,11 +49,17 @@ function SignIn() {
                 console.log(data)
                 if(data.student === 'not') {
                     formErrors.password = 'Password is incorrect'
+                    mainButton.innerText = "Login"
+                    loadingCircle.classList.remove('active')
                 }
                 if(data.error === 'Invalid email') {
                     formErrors.email = 'Invalid email'
+                    mainButton.innerText = "Login"
+                    loadingCircle.classList.remove('active')
                 }
                 if (data.message === 'sent an email') {
+                    mainButton.innerText = "Login"
+                    loadingCircle.classList.remove('active')
                     const notification = document.createElement('div')
                     notification.classList.add('notification')
                     notification.innerHTML = 'An email sent to your account. Please verify!'
@@ -63,13 +75,14 @@ function SignIn() {
                         password: '',
                     })
                     sessionStorage.setItem('student', data.student)
-                    const mainButton = document.getElementById('button-text')
-                    const loadingCircle = document.getElementById('sign-in-loading-circle')
-                    mainButton.innerText = ""
-                    loadingCircle.classList.add('active')
+                    mainButton.innerText = "Login"
+                    loadingCircle.classList.remove('active')
                     window.location.href = '/student-courses'
                 }
                 setIsSubmit(false)
+            } else {
+                mainButton.innerText = "Login"
+                loadingCircle.classList.remove('active')
             }
         }
         formUpload()
