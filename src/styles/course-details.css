@@ -1,7 +1,7 @@
 .course-container{
     width: 100%;
     height: fit-content;
-    background-color: rgb(169, 192, 213);
+    background-color: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,7 +18,7 @@
 
 .course-content .course-card{
     height: fit-content;
-    box-shadow: 2px 2px 20px rgba(71, 157, 255, 0.5);
+    box-shadow: 2px 2px 20px var(--shadow);
     border-radius: 15px;
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
@@ -26,17 +26,21 @@
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     padding: 20px 20px;
     margin: 10px;
-    color: rgb(55, 61, 70);
+    color: var(--text-hue);
 } 
 
 .course-content .course-card p{
     font-size: 12px;
-    color: rgb(89, 91, 93);
+    color: var(--text-hue);
 }
 
 .course-content .course-card h5{
-    color: rgb(55, 61, 70);
+    color: var(--text-hue);
     margin-top: 10px;
+}
+
+.emails{
+    color: var(--text-hue);
 }
 
 @media(max-width: 840px) {

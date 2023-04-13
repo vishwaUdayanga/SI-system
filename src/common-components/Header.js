@@ -87,12 +87,52 @@ function Header() {
         }
     }
 
+    const theme = localStorage.getItem("theme")
+
     useEffect(() => {
         const menuButtonContainer = document.querySelector('.menu-button-container')
         const menuList = document.querySelector('.menu-list')
         menuButtonContainer.addEventListener('click', () => {
             menuList.classList.toggle('active')
         })
+
+        const themeButton = document.querySelector('.theme')
+        const palette = document.querySelector(':root')
+        themeButton.addEventListener('click', () => {
+            if (themeButton.className.includes('dark')){
+                themeButton.classList.remove('dark')
+                localStorage.removeItem('theme')
+                palette.style.setProperty('--background-hue', '#c7d5e0');
+                palette.style.setProperty('--text-hue', '#333646');
+                palette.style.setProperty('--white', '#d9e7f1');
+                palette.style.setProperty('--black', '#2a2c39');
+                palette.style.setProperty('--shadow', 'rgba(71, 157, 255, 0.5)');
+            } else {
+                themeButton.classList.add('dark')
+                localStorage.setItem('theme', 'dark')
+                palette.style.setProperty('--background-hue', '#333646');
+                palette.style.setProperty('--text-hue', '#c7d5e0');
+                palette.style.setProperty('--white', '#2a2c39');
+                palette.style.setProperty('--black', '#d9e7f1');
+                palette.style.setProperty('--shadow', 'rgba(68, 77, 87, 0.5)');
+            }
+        })
+
+        if (theme) {
+            themeButton.classList.add('dark')
+            palette.style.setProperty('--background-hue', '#333646');
+            palette.style.setProperty('--text-hue', '#c7d5e0');
+            palette.style.setProperty('--white', '#2a2c39');
+            palette.style.setProperty('--black', '#d9e7f1');
+            palette.style.setProperty('--shadow', 'rgba(68, 77, 87, 0.5)');
+        } else {
+            themeButton.classList.remove('dark')
+            palette.style.setProperty('--background-hue', '#c7d5e0');
+            palette.style.setProperty('--text-hue', '#333646');
+            palette.style.setProperty('--white', '#d9e7f1');
+            palette.style.setProperty('--black', '#2a2c39');
+            palette.style.setProperty('--shadow', 'rgba(71, 157, 255, 0.5)');
+        }
 
         const studentToken = sessionStorage.getItem('student')
         if(studentToken) {
@@ -110,7 +150,7 @@ function Header() {
         if(isSetProfileImg) {
             createPostProfilePic(postProfileImage)
         }
-    }, [isSetProfileImg, postProfileImage])
+    }, [isSetProfileImg, postProfileImage, theme])
 
     return(
         <header>
@@ -145,6 +185,7 @@ function Header() {
                             <span></span>
                         </div>
                     </div>
+                    <div className='theme'></div>
                 </div>
                 <div className='menu-list'>
                     <ul>

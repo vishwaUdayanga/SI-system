@@ -6,7 +6,7 @@ footer{
     align-items: center;
     flex-direction: column;
     background-color: var(--background-hue);
-    border-top: 20px solid #c0ced8;
+    border-top: 20px solid var(--white);
     overflow: hidden;
 }
 
@@ -32,7 +32,7 @@ footer{
     max-width: 80%;
     margin-top: 20px;
     font-size: 14px;
-    color: rgb(73, 74, 75);
+    color: var(--text-hue);
 }
 
 .footer-links{
@@ -50,7 +50,7 @@ footer{
 
 .footer-links ul li p{
     font-size: 14px;
-    color: rgb(73, 74, 75);
+    color: var(--text-hue);
 }
 
 .footer-button{
@@ -83,9 +83,13 @@ footer{
 .copy-rights{
     width: 100%;
     padding: 20px 20px;
-    background-color: #d9e7f1;
+    background-color: var(--white);
     text-align: center;
     font-size: 14px;
+    color: var(--text-hue);
+}
+
+.footer-links{
     color: var(--text-hue);
 }
 

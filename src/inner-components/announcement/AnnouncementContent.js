@@ -71,8 +71,8 @@ function AnnouncementContent() {
                 <div className='announcement-card' id='announcement2-card'>
                     <p id="announcement2">
                         NOTICE - SLIIT Academy Holiday Notice(All Students) <br />
-                        Source - <Link to='#' onClick={(e) => {window.location.href = 'https://sam.sliitacademy.lk/mod/forum/discuss.php?d=1728#p2140'; e.preventDefault();}}>https://sam.sliitacademy.lk/mod/forum/discuss.php?d=1728#p2140</Link> <br />
-                        FROM - <Link to='#' onClick={(e) => {window.location.href = 'https://si-system.onrender.com'; e.preventDefault();}}>https://si-system.onrender.com</Link> <br /><br />
+                        Source - <Link to='#' onClick={(e) => {window.location.href = 'https://sam.sliitacademy.lk/mod/forum/discuss.php?d=1728#p2140'; e.preventDefault();}} className='announcement-links'>https://sam.sliitacademy.lk/mod/forum/discuss.php?d=1728#p2140</Link> <br />
+                        FROM - <Link to='#' onClick={(e) => {window.location.href = 'https://si-system.onrender.com'; e.preventDefault();}} className='announcement-links'>https://si-system.onrender.com</Link> <br /><br />
                         Dear Students, <br /><br />
                         Please note that, SLIIT Academy will be closed from 10th April 2023 to 16th April 2023 in lieu of Sinhala & Tamil New Year.
                          <br /><br />
@@ -89,7 +89,7 @@ function AnnouncementContent() {
                 <div className='announcement-card' id='announcement1-card'>
                     <p id="announcement1">
                         NOTICE - Academic Announcement and Sharing Information <br />
-                        FROM - <Link to='#' onClick={(e) => {window.location.href = 'https://si-system.onrender.com'; e.preventDefault();}}>https://si-system.onrender.com</Link> <br /><br />
+                        FROM - <Link to='#' onClick={(e) => {window.location.href = 'https://si-system.onrender.com'; e.preventDefault();}} className='announcement-links'>https://si-system.onrender.com</Link> <br /><br />
                         Hi there, <br /><br />
                         From this point forward, you will receive announcements about academic matters via email, this group from the built site, and it will also be listed in the announcement tab. Visit the aforementioned website to register if you haven't already. <br /><br />
 

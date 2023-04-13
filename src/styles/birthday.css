@@ -3,7 +3,7 @@
 .birthday-container{
     width: 100%;
     height: fit-content;
-    background-color: rgb(169, 192, 213);
+    background-color: var(--white);
     display: flex;
     justify-content: center;
     padding: 20px 20px;
@@ -22,7 +22,7 @@
 }
 
 .birthday-content h2{
-    color: rgb(65, 34, 69);
+    color: var(--text-hue);
     font-weight: 500;
     font-size: 20px;
 }
@@ -48,7 +48,7 @@
     width: 500px;
     height: 600px;
     margin-top: 10px;
-    background-color: rgb(217, 232, 244);
+    background-color: rgb(198, 215, 229);
     overflow: hidden;
 }
 
