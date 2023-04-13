@@ -63,6 +63,10 @@ function SignIn() {
                         password: '',
                     })
                     sessionStorage.setItem('student', data.student)
+                    const mainButton = document.getElementById('button-text')
+                    const loadingCircle = document.getElementById('sign-in-loading-circle')
+                    mainButton.innerText = ""
+                    loadingCircle.classList.add('active')
                     window.location.href = '/student-courses'
                 }
                 setIsSubmit(false)
@@ -92,7 +96,7 @@ function SignIn() {
                     />
                     <p>{formErrors.password}</p>
                     <Link to="/sign-up" className="link">Sign Up</Link>
-                    <button>Login</button>
+                    <button id='signIn'><h3 className='button-text' id='button-text'>Login</h3><div className='sign-in-loading-circle' id='sign-in-loading-circle'></div></button>
                 </form>
             </div>
         </>
