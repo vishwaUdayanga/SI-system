@@ -68,6 +68,28 @@ function AnnouncementContent() {
     return(
         <div className='announcement-container'>
             <div className='announcement-content'>
+                <div className='announcement-card' id='announcement3-card'>
+                    <p id="announcement3">
+                        NOTICE - Platform Update <br />
+                        FROM - <Link to='#' onClick={(e) => {window.location.href = 'https://si-system.onrender.com'; e.preventDefault();}} className='announcement-links'>https://si-system.onrender.com</Link> <br /><br />
+                         Good Evening ! New following features have been added to our website for your convenience. <br /><br /> 
+
+                        1. You can change or Edit your personal details such as name, Sa number etc. <br /><br />
+
+                        2. There's a new dark mode option available. <br /><br />
+
+                        3. Separate tab for learning documents such as tutorial answers, short notes. <br /><br />
+
+                        Those who haven't got the SA number yet, just type any number you want and change once you receive it. If you haven't joined yet you can join using the above link. Keep up the good work and happy new year! 
+                    </p>
+                    {
+                        userType === "Admin" &&
+                        <div className='button-container'>
+                            <button onClick={() => sendEmail("announcement3")} className='announcement-send-button'>Email</button>
+                            <button onClick={() => sendWhatsapp("announcement3")} className='announcement-send-button'>Whatsapp</button>
+                        </div> 
+                    }
+                </div>
                 <div className='announcement-card' id='announcement2-card'>
                     <p id="announcement2">
                         NOTICE - SLIIT Academy Holiday Notice(All Students) <br />
