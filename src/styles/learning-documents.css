@@ -1,0 +1,77 @@
+.documents-container{
+    width: 100%;
+    height: fit-content;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    padding: 20px 20px;
+    overflow: hidden;
+}
+
+.documents-content{
+    width: 800px;
+    height: fit-content;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+}
+
+.module-name{
+    width: 100%;
+    text-align: left;
+    color: var(--text-hue);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: var(--background-hue);
+}
+
+.module-name h2{
+    padding-left: 5px;
+    border-left: 10px solid var(--topic-bar-hue);
+}
+
+.document-card{
+    width: 400px;
+    height: fit-content;
+    display: block;
+    margin-top: 20px;
+}
+
+.main-text{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 20px;
+    color: #c7d5e0;
+    background-image: url('../images/sample-avatar/leaning-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.download-btn{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--topic-bar-hue);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+}
+
+.download-btn img{
+    width: 15px;
+    height: 15px;
+}
+
+@media(max-width: 455px){
+    .document-card{
+        width: 100%;
+    }
+}

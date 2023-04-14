@@ -6,6 +6,7 @@ import StudentCourses from './main-pages/StudentCourses'
 import Birthday from './main-pages/Birthday'
 import Announcement from './main-pages/Announcement'
 import Settings from './main-pages/Settings'
+import LearningDocuments from './main-pages/LearningDocuments'
 import './styles/general-style.css'
 import './styles/color-palette.css'
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/birthdays" element={<Birthday />} />
         <Route path="/announcement" element={<Announcement />} />
         <Route path="/settings" element={<Settings />} />
+        <Route path="/learning-documents" element={<LearningDocuments />} />
       </Routes>
     </BrowserRouter>
   );

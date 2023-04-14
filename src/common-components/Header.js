@@ -199,7 +199,7 @@ function Header() {
                             <Link to="/birthdays" className="menu-links">Birthdays</Link>
                         </li>
                         <li>
-                            <Link className="menu-links">Events</Link>
+                            <Link to="/learning-documents" className="menu-links">Learning Documents</Link>
                         </li>
                         <li>
                             <Link to="/settings" className="menu-links">Settings</Link>
