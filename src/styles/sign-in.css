@@ -64,7 +64,7 @@
     cursor: pointer;
 }
 
-.sign-in-loading-circle{
+.loading-circle{
     position: absolute;
     top: 8px;
     left: 47%;
@@ -76,11 +76,11 @@
     animation: rotate 0.5s linear infinite;
 }
 
-.sign-in-loading-circle.active{
+.loading-circle.active{
     display: block;
 }
 
-.sign-in-loading-circle::after{
+.loading-circle::after{
     content: '';
     width: 10px;
     height: 15px;

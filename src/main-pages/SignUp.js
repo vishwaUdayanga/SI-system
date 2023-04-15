@@ -20,6 +20,10 @@ function SignUp() {
     async function signUpStudent(event) {
         event.preventDefault()
         setFormErrors(validate(formData.password, formData.confirmPassword, formData.phoneNumber))
+        const mainButton = document.getElementById('button-text')
+        const loadingCircle = document.getElementById('loading-circle')
+        mainButton.innerText = ""
+        loadingCircle.classList.add('active')
         setIsSubmit(true)
     }
 
@@ -40,6 +44,8 @@ function SignUp() {
 
     useEffect(() => {
         const notificationContainer = document.querySelector('.notification-container')
+        const mainButton = document.getElementById('button-text')
+        const loadingCircle = document.getElementById('loading-circle')
 
         async function formUpload() {
             if(Object.keys(formErrors).length === 0 && isSubmit) {
@@ -56,6 +62,8 @@ function SignUp() {
                 console.log(data)
                 if (data.error === 'invalid') {
                     formErrors.email = 'This email has already registered'
+                    mainButton.innerText = "Submit"
+                    loadingCircle.classList.remove('active')
                 }
                 if (data.registered === 'done') {
                     console.log("registered successfully")
@@ -72,6 +80,8 @@ function SignUp() {
                     // animatedElements.forEach((elements) => {
                     //     elements.classList.add('active')
                     // })
+                    mainButton.innerText = "Submit"
+                    loadingCircle.classList.remove('active')
                     const notification = document.createElement('div')
                     notification.classList.add('notification')
                     notification.innerHTML = 'An email sent to your account. Please verify!'
@@ -81,6 +91,9 @@ function SignUp() {
                     }, 7000)
                 }
                 setIsSubmit(false)
+            } else {
+                mainButton.innerText = "Submit"
+                loadingCircle.classList.remove('active')
             }
         }
         formUpload()
@@ -151,7 +164,7 @@ function SignUp() {
                     />
                     <p>{formErrors.confirmPassword}</p>
                     <Link to="/" className="link">Sign In</Link>
-                    <button>Submit</button>
+                    <button id='signUp'><h3 className='button-text' id='button-text'>Submit</h3><div className='loading-circle' id='loading-circle'></div></button>
                 </form>
             </div>
         </>

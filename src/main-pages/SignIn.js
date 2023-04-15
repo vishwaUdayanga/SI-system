@@ -14,7 +14,7 @@ function SignIn() {
         event.preventDefault()
         setFormErrors(validate(formData.password, formData.email))
         const mainButton = document.getElementById('button-text')
-        const loadingCircle = document.getElementById('sign-in-loading-circle')
+        const loadingCircle = document.getElementById('loading-circle')
         mainButton.innerText = ""
         loadingCircle.classList.add('active')
         setIsSubmit(true)
@@ -32,7 +32,7 @@ function SignIn() {
     useEffect(() => {
         const notificationContainer = document.querySelector('.notification-container')
         const mainButton = document.getElementById('button-text')
-        const loadingCircle = document.getElementById('sign-in-loading-circle')
+        const loadingCircle = document.getElementById('loading-circle')
 
         async function formUpload() {
             if(Object.keys(formErrors).length === 0 && isSubmit) {
@@ -109,7 +109,7 @@ function SignIn() {
                     />
                     <p>{formErrors.password}</p>
                     <Link to="/sign-up" className="link">Sign Up</Link>
-                    <button id='signIn'><h3 className='button-text' id='button-text'>Login</h3><div className='sign-in-loading-circle' id='sign-in-loading-circle'></div></button>
+                    <button id='signIn'><h3 className='button-text' id='button-text'>Login</h3><div className='loading-circle' id='loading-circle'></div></button>
                 </form>
             </div>
         </>
