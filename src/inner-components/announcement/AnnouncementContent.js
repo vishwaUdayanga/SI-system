@@ -68,6 +68,22 @@ function AnnouncementContent() {
     return(
         <div className='announcement-container'>
             <div className='announcement-content'>
+                <div className='announcement-card' id='announcement4-card'>
+                    <p id="announcement4">
+                        NOTICE - Additional Lecture on 27th <br />
+                        FROM - <Link to='#' onClick={(e) => {window.location.href = 'https://si-system.onrender.com'; e.preventDefault();}} className='announcement-links'>https://si-system.onrender.com</Link> <br /><br />
+                        Next Tuesday we will not have any lectures because of the new year festival. To cover the content of the Foundation of Mathematical Skills on that day, We will have an extra lecture on Thursday, April 27th from 2 p.m. to 5 p.m. Please share this message with the students who did not attend today's lecture. <br /><br />
+                        Thank you 
+                    </p>
+                    {
+                        userType === "Admin" &&
+                        <div className='button-container'>
+                            <button onClick={() => sendEmail("announcement4")} className='announcement-send-button'>Email</button>
+                            <button onClick={() => sendWhatsapp("announcement4")} className='announcement-send-button'>Whatsapp</button>
+                        </div> 
+                    }
+                </div>
+
                 <div className='announcement-card' id='announcement3-card'>
                     <p id="announcement3">
                         NOTICE - Platform Update <br />
