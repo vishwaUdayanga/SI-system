@@ -68,6 +68,21 @@ function AnnouncementContent() {
     return(
         <div className='announcement-container'>
             <div className='announcement-content'>
+                <div className='announcement-card' id='announcement5-card'>
+                    <p id="announcement5">
+                        NOTICE - Math Recap <br />
+                        FROM - <Link to='#' onClick={(e) => {window.location.href = 'https://si-system.onrender.com'; e.preventDefault();}} className='announcement-links'>https://si-system.onrender.com</Link> <br /><br />
+                        Hello, we are doing a math recap session tomorrow starting around 8.30 a.m. at sliit. Anyone who is interested may join. 
+                    </p>
+                    {
+                        userType === "Admin" &&
+                        <div className='button-container'>
+                            <button onClick={() => sendEmail("announcement5")} className='announcement-send-button'>Email</button>
+                            <button onClick={() => sendWhatsapp("announcement5")} className='announcement-send-button'>Whatsapp</button>
+                        </div> 
+                    }
+                </div>
+
                 <div className='announcement-card' id='announcement4-card'>
                     <p id="announcement4">
                         NOTICE - Additional Lecture on 27th <br />
