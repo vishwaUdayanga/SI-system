@@ -6,6 +6,7 @@ import fmsFactorization1 from '../../documents/FMS/FMS-factorization1-answers.pd
 import fmsFactorization2 from '../../documents/FMS/FMS-factorization2-answers.pdf'
 import fmsFactorization3 from '../../documents/FMS/FMS-factorization3-answers.pdf'
 import fmsTutorial1 from '../../documents/FMS/FMS-tutorial1-answers.pdf'
+import absoluteValueNote from '../../documents/FMS/Absolute-value-note.pdf'
 
 function DocumentContent() {
     function downloadDocument(leaningDocument, name) {
@@ -72,6 +73,14 @@ function DocumentContent() {
                         <h3>TUTORIAL 01 ANSWERS</h3>
                     </div>
                     <div onClick={() => downloadDocument(fmsTutorial1, "FMS-tutorial1-answers")} className='download-btn'>
+                        <img src={downloadImg} alt='' />
+                    </div>
+                </div>
+                <div className='document-card'>
+                    <div className='main-text'>
+                        <h3>ABSOLUTE VALUE NOTE</h3>
+                    </div>
+                    <div onClick={() => downloadDocument(absoluteValueNote, "Absolute-value-note")} className='download-btn'>
                         <img src={downloadImg} alt='' />
                     </div>
                 </div>

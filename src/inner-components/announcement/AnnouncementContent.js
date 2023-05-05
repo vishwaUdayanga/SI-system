@@ -68,6 +68,21 @@ function AnnouncementContent() {
     return(
         <div className='announcement-container'>
             <div className='announcement-content'>
+                <div className='announcement-card' id='announcement6-card'>
+                    <p id="announcement6">
+                        NOTICE - A note for Absolute value <br />
+                        FROM - <Link to='#' onClick={(e) => {window.location.href = 'https://si-system.onrender.com'; e.preventDefault();}} className='announcement-links'>https://si-system.onrender.com</Link> <br /><br />
+                        Hello, I have prepared a note for friends who need an explanation of absolute value and how to graph it. You can get that document via the website or this group. If you would like to have some more questions related to this theory, let me know and I will put some more questions for you. 
+                    </p>
+                    {
+                        userType === "Admin" &&
+                        <div className='button-container'>
+                            <button onClick={() => sendEmail("announcement6")} className='announcement-send-button'>Email</button>
+                            <button onClick={() => sendWhatsapp("announcement6")} className='announcement-send-button'>Whatsapp</button>
+                        </div> 
+                    }
+                </div>
+
                 <div className='announcement-card' id='announcement5-card'>
                     <p id="announcement5">
                         NOTICE - Math Recap <br />
